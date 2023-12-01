@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-__year=2022
+__year=2023
 
 if [ "${1}" != "" ]; then
     padded=$(printf "%02g" ${1})

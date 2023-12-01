@@ -19,7 +19,9 @@ let package = Package(
             path: "./01",
             sources: ["main.swift"],
             resources: [
-                .process("input.txt")
+                .process("input.txt"),
+                .process("testinput.txt"),
+                .process("testinput2.txt")
             ])
     ]
 )
