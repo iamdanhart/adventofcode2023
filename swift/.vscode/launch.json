@@ -23,6 +23,30 @@
             "name": "Release 01",
             "program": "${workspaceFolder:swift}/.build/release/01",
             "preLaunchTask": "swift: Build Release 01"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:swift}",
+            "name": "Debug 02",
+            "program": "${workspaceFolder:swift}/.build/debug/02",
+            "preLaunchTask": "swift: Build Debug 02"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:swift}",
+            "name": "Release 02",
+            "program": "${workspaceFolder:swift}/.build/release/02",
+            "preLaunchTask": "swift: Build Release 02"
         }
     ]
   }
