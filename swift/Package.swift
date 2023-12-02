@@ -17,7 +17,7 @@ let package = Package(
                 "MyCommon"
             ],
             path: "./01",
-            sources: ["main.swift"],
+            // sources: ["main.swift"], unneeded since all Swift files in path are included
             resources: [
                 .process("input.txt"),
                 .process("testinput.txt"),
@@ -30,7 +30,6 @@ let package = Package(
                 "MyCommon"
             ],
             path: "./02",
-            sources: ["main.swift"],
             resources: [
                 .process("input.txt"),
                 .process("testinput.txt"),
