@@ -7,12 +7,12 @@ struct CubeSet {
     public var numBlue: Int = 0
 }
 
-struct GamePart1 {
+struct Game {
     public var gameValue: Int = 0
     public var cubeSets: [CubeSet] = Array()
 }
 
-func extractValuesFromGamePart1(_ line: String) -> GamePart1 {
+func extractValuesFromGamePart1(_ line: String) -> Game {
     let gameAndSets = line.components(separatedBy: ":")
     let gameNumber = Int(gameAndSets[0].filter("1234567890".contains))
 
@@ -35,14 +35,14 @@ func extractValuesFromGamePart1(_ line: String) -> GamePart1 {
         cubeSets.append(cubeSet)
     }
 
-    var game = GamePart1()
+    var game = Game()
     game.gameValue = gameNumber!
     game.cubeSets = cubeSets
 
     return game
 }
 
-func validateGamePart1(_ game: GamePart1) -> Bool {
+func validateGamePart1(_ game: Game) -> Bool {
     let possibleRed = 12
     let possibleGreen = 13
     let possibleBlue = 14
@@ -57,7 +57,7 @@ func validateGamePart1(_ game: GamePart1) -> Bool {
     return true
 }
 
-func validateGamePart2(_ game: GamePart1) -> CubeSet {
+func validateGamePart2(_ game: Game) -> CubeSet {
     var minRed = 0
     var minBlue = 0
     var minGreen = 0
