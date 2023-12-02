@@ -22,6 +22,19 @@ let package = Package(
                 .process("input.txt"),
                 .process("testinput.txt"),
                 .process("testinput2.txt")
+            ]
+        ),
+        .executableTarget(
+            name: "02",
+            dependencies: [
+                "MyCommon"
+            ],
+            path: "./02",
+            sources: ["main.swift"],
+            resources: [
+                .process("input.txt"),
+                .process("testinput.txt"),
+                .process("testinput2.txt")
             ])
     ]
 )
