@@ -12,7 +12,7 @@ struct Game {
     public var cubeSets: [CubeSet] = Array()
 }
 
-func extractValuesFromGamePart1(_ line: String) -> Game {
+func extractValuesFromGame(_ line: String) -> Game {
     let gameAndSets = line.components(separatedBy: ":")
     let gameNumber = Int(gameAndSets[0].filter("1234567890".contains))
 
@@ -83,7 +83,7 @@ func part1(lines: [String]) -> Int {
         if (line.count < 1) {
             continue
         }
-        let game = extractValuesFromGamePart1(line)
+        let game = extractValuesFromGame(line)
         if (validateGamePart1(game)) {
             sum += game.gameValue
         }
@@ -99,7 +99,7 @@ func part2(lines: [String]) -> Int {
         if (line.count < 1) {
             continue
         }
-        let game = extractValuesFromGamePart1(line)
+        let game = extractValuesFromGame(line)
         let minPossibleGameSet = validateGamePart2(game)
         sum += minPossibleGameSet.numRed 
             * minPossibleGameSet.numGreen 
